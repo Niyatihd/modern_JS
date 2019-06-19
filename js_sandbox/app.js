@@ -34,3 +34,6 @@ console.timeEnd("hello");
 // class names and constructor functions use PascalCase
 // 5. var and let CAN initializes without a value
 // 6. const CANNOT initializes without a value
+
+// 7. JS is dynamically typed language
+//    Typescript/flow turns JS into statically typed
