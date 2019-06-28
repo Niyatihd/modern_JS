@@ -124,6 +124,23 @@ function removeTask(e) {
 }
 
 //removeTaskFromLocalStorage function
+function removeTaskFromLocalStorage(taskItem) {
+  let tasks;
+
+  if (localStorage.getItem("tasks") === null) {
+    tasks = null;
+  } else {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+  }
+
+  tasks.forEach((task, i) => {
+    if (taskItem.textContent === task) {
+      tasks.splice(i, 1);
+    }
+  });
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
 
 //clearTasks function
 function clearTasks() {
@@ -134,6 +151,14 @@ function clearTasks() {
   while (taskList.firstChild) {
     taskList.removeChild(taskList.firstChild);
   }
+
+  //Clear tasks from LS
+  clearTasksFromLocalStorage();
+}
+
+//clearTasksFromLocalStorage function
+function clearTasksFromLocalStorage() {
+  localStorage.clear();
 }
 
 //filterTasks function
