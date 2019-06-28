@@ -48,4 +48,10 @@ function addTask(e) {
 }
 
 // removeTask function
-function removeTask(e) {}
+function removeTask(e) {
+  if (e.target.parentElement.classList.contains("delete-item")) {
+    if (confirm("Are you sure?")) {
+      e.target.parentElement.parentElement.remove();
+    }
+  }
+}
