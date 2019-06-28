@@ -37,3 +37,13 @@ console.timeEnd("hello");
 
 // 7. JS is dynamically typed language
 //    Typescript/flow turns JS into statically typed
+
+const name = "John Doe";
+console.log(typeof name);
+
+// 8. Concatenate or Append string variables
+let firstName = "John";
+let lastName = "Doe";
+let age = 34;
+let sentence =
+  "My name is " + firstName + " " + lastName + " and my age is " + age;
